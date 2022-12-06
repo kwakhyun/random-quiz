@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+## Random Quiz 🔔
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🚀 구현 기능
 
-## Available Scripts
+- 퀴즈 풀기 버튼을 클릭해 퀴즈 풀기 시작
+- 4개의 선택지 중 하나를 선택해 정답을 맞추기
+  - 답안을 선택하면 다음 문제로 넘어가는 버튼 활성화
+  - 답안이 맞으면 정답 표시, 틀리면 오답 표시
+  
+- 모든 문제를 풀면 결과 화면으로 넘어가기
+  - 퀴즈 풀기 소요 시간 표시
+  - 정답, 오답 개수 표시
+  - 정답, 오답에 대한 비율 표시
+  - 오답 노트 버튼: 오답 노트 기능
+  - 처음으로 버튼: 시작 화면으로 돌아가기
+<br>
 
-In the project directory, you can run:
+### Context API를 이용한 상태 관리
 
-### `npm start`
+처음에는 상태 관리와 관심사 분리 용도로 Redux 도입을 고려했으나, 생각보다 해당 애플리케이션의 상태가 간단하다고 판단하여 Context API를 사용했습니다.
+<br><br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Jest를 이용한 단위 테스트
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `App.test.tsx`: 첫 화면 snapshot 확인
+- `api.test.tsx`: `fetchQuiz`, 불러오는 퀴즈의 개수로 API 호출 여부 확인
+- `numberToTime.test.tsx`: 숫자(integer)가 올바르게 시간을 보여주는 문장(string)으로 변환하는지 확인
+- `scoreboard.test.tsx`: 주어진 답안지와 제출한 답안지로 맞은 문제의 개수를 리턴하는지 확인
