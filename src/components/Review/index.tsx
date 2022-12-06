@@ -118,19 +118,4 @@ const StyledReview = styled.div`
     font-weight: 900;
     color: ${({ theme }) => theme.colors.red[200]};
   }
-
-  .correct-answer,
-  .incorrect-answer {
-    margin-bottom: 1rem;
-  }
-
-  .correct-answer:last-child,
-  .incorrect-answer:last-child {
-    margin-bottom: 0;
-  }
-
-  .correct-answer:first-child,
-  .incorrect-answer:first-child {
-    margin-bottom: 0;
-  }
 `;

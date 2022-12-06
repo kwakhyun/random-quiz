@@ -44,4 +44,16 @@ const StyledModal = styled.div`
     margin-top: 2rem;
     overflow-y: auto;
   }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
 `;

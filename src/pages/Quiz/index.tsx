@@ -115,7 +115,6 @@ const StyledQuizPage = styled.div`
 
     .button-box {
       margin: 1rem;
-      height: 30px;
       font-size: 1.2rem;
       font-weight: 600;
       .correct-message {
@@ -123,6 +122,27 @@ const StyledQuizPage = styled.div`
       }
       .incorrect-message {
         color: ${({ theme }) => theme.colors.red[400]};
+      }
+      .next-button {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 90vw;
+      .quiz-title {
+        font-size: 1.2rem;
+      }
+      .quiz-options {
+        margin-top: 1rem;
+        gap: 0.5rem;
+      }
+      .button-box {
+        margin: 0.5rem;
+        font-size: 1rem;
+        .next-button {
+          margin-top: 0.5rem;
+        }
       }
     }
   }
