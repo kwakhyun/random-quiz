@@ -23,8 +23,12 @@ const StartPage = () => {
 
   return (
     <StyledStartPage>
-      <h1>Random Quiz!</h1>
-      <p>아래 버튼을 누르면 퀴즈 풀기를 시작합니다.</p>
+      <h1>Random Quiz 🔔</h1>
+      <div className="info-box">
+        <p>퀴즈는 총 10문제입니다.</p>
+        <p>4지 선다형 무작위 영문 퀴즈입니다.</p>
+        <p>퀴즈 풀기를 시작하려면 아래 버튼을 눌러주세요.</p>
+      </div>
       <Button className="start-button" handleClick={handleButtonClick}>
         퀴즈 풀기
       </Button>
@@ -42,8 +46,12 @@ const StyledStartPage = styled.div`
   width: 100vw;
   height: 100vh;
 
-  p {
+  .info-box {
+    text-align: center;
     margin-top: 10px;
-    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
   }
 `;
