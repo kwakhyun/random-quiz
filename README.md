@@ -1,4 +1,4 @@
-## Random Quiz 🔔
+## 🔔 Random Quiz
 
 ### 🚀 구현 기능
 
@@ -15,12 +15,12 @@
   - 처음으로 버튼: 시작 화면으로 돌아가기
 <br>
 
-### Context API를 이용한 상태 관리
+### 🗄 Context API를 이용한 상태 관리
 
 처음에는 상태 관리와 관심사 분리 용도로 Redux 도입을 고려했으나, 생각보다 해당 애플리케이션의 상태가 간단하다고 판단하여 Context API를 사용했습니다.
 <br><br>
 
-### Jest를 이용한 단위 테스트
+### 🚦 Jest를 이용한 단위 테스트
 
 - `App.test.tsx`: 첫 화면 snapshot 확인
 - `api.test.tsx`: `fetchQuiz`, 불러오는 퀴즈의 개수로 API 호출 여부 확인
